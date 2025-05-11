@@ -21,8 +21,8 @@ export const createEvent = async (req: Request, res: Response, next: NextFunctio
         await event.save();
         res.status(201).json(event);
     } catch (error) {
-        console.log(error.message)
-        res.status(500).json({ status: "fail", message: error.message });
+        console.log(error)
+        res.status(500).json({ status: "fail", message: error });
     }
 }
 
@@ -35,7 +35,7 @@ export const eventDetails = async (req: Request, res: Response, next: NextFuncti
         }
         res.status(200).json(event);
     } catch (error) {
-        res.status(500).json({ status: "fail", message: error.message });
+        res.status(500).json({ status: "fail", message: error });
     }
 }
 
@@ -49,7 +49,7 @@ export const getEventByAddress = async (req: Request, res: Response, next: NextF
         }
         res.status(200).json(events);
     } catch (error) {
-        res.status(500).json({ status: "fail", message: error.message });
+        res.status(500).json({ status: "fail", message: error });
     }
 }
 
@@ -72,6 +72,6 @@ export const updateEvent = async (req: Request, res: Response, next: NextFunctio
         }
         res.status(200).json(event);
     } catch (error) {
-        res.status(500).json({ status: "fail", message: error.message });
+        res.status(500).json({ status: "fail", message: error });
     }
 }

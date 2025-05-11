@@ -35,8 +35,8 @@ const createEvent = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
         res.status(201).json(event);
     }
     catch (error) {
-        console.log(error.message);
-        res.status(500).json({ status: "fail", message: error.message });
+        console.log(error);
+        res.status(500).json({ status: "fail", message: error });
     }
 });
 exports.createEvent = createEvent;
@@ -50,7 +50,7 @@ const eventDetails = (req, res, next) => __awaiter(void 0, void 0, void 0, funct
         res.status(200).json(event);
     }
     catch (error) {
-        res.status(500).json({ status: "fail", message: error.message });
+        res.status(500).json({ status: "fail", message: error });
     }
 });
 exports.eventDetails = eventDetails;
@@ -64,7 +64,7 @@ const getEventByAddress = (req, res, next) => __awaiter(void 0, void 0, void 0, 
         res.status(200).json(events);
     }
     catch (error) {
-        res.status(500).json({ status: "fail", message: error.message });
+        res.status(500).json({ status: "fail", message: error });
     }
 });
 exports.getEventByAddress = getEventByAddress;
@@ -88,7 +88,7 @@ const updateEvent = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
         res.status(200).json(event);
     }
     catch (error) {
-        res.status(500).json({ status: "fail", message: error.message });
+        res.status(500).json({ status: "fail", message: error });
     }
 });
 exports.updateEvent = updateEvent;
